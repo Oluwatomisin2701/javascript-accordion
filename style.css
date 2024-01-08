@@ -116,6 +116,16 @@ h2:is(:hover,:focus), .notes-cont img:is(:hover,:focus){
     padding-bottom: 15px;
 }
 
+@media (max-width: 425px){
+    body{
+        background-image: url(./assets/images/background-pattern-mobile.svg);
+        background-size: contain;
+    }
+    .container{
+        width: 80%;
+    }
+}
+
 @media (max-width: 375px){
     body{
         background-image: url(./assets/images/background-pattern-mobile.svg);
