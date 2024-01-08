@@ -1,0 +1,139 @@
+@import url(./font.css);
+
+:root{
+    /*----Font Families---*/
+    --WorkSans-Reg: 'WorkSans';
+    --WorkSans-Bold: 'WorkSansBold';
+    --WorkSans-Semi: 'WorkSansSemi';
+    --WorkSans-Ita: 'WorkSansItalic';
+
+    /*----Colors----*/
+    --Color-White: hsl(0, 0%, 100%);
+    --Color-Lightpink: hsl(275, 100%, 97%);
+    --Color-Grayish: hsl(292, 16%, 49%);
+    --Color-darkpurple: hsl(292, 100%, 20%);
+
+    /*---Font Size and Weights---*/
+    --Font-paragraph: 16px;
+    --Fontweight-Light: 300;
+    --Fontweight-Medium: 600;
+    --Fontweight-Thick: 700;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+h2{
+    font-size: 1em;
+}
+
+hr{
+    opacity: 0.1;
+}
+
+body{
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    background-color: var(--Color-Lightpink);
+}
+
+.container{
+    background-color: white;
+    width: 40%;
+    padding: 1em 2em;
+    margin: 7em auto 0;
+    border-radius: 10px;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    font-family: var(--WorkSans-Bold);
+    font-weight: var(--Fontweight-Thick);
+}
+
+.header h1{
+    font-size: 3em;
+    margin-left: .5em;
+}
+
+.accordion{
+    overflow: hidden;
+    transition: all 0.2s linear;
+}
+
+.accordion.open header{
+    min-height: 35px;
+}
+
+.accordion-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.accordion-heading a h2{
+    font-family: var(--WorkSans-Semi);
+    font-size: var(--Font-paragraph);
+    transition: 1s ease-in-out;
+}
+
+.accordion-heading a h2:hover{
+    color: var(--Color-darkpurple);
+}
+
+.accordion-content{
+    font-family: var(--WorkSans-Reg);
+    font-weight: var(--Fontweight-light);
+    font-size: .8em;
+    height: 0;
+    transition: all 0.2 linear;
+}
+
+h2:is(:hover,:focus), .notes-cont img:is(:hover,:focus){
+    cursor: pointer;
+}
+
+.fa-minus{
+    display: none;
+}
+
+.accordion.open{
+    padding-bottom: 15px;
+}
+
+@media (max-width: 375px){
+    body{
+        background-image: url(./assets/images/background-pattern-mobile.svg);
+        background-size: contain;
+    }
+    .container {
+        width: 80%;
+        padding: 1em 2em;
+        margin: 5em auto 0;
+    }
+    .header img{
+        width: 40px;
+        height: 40px;
+    }
+    .header h1{
+        font-size: 2em;
+    }
+    .accordion-heading a h2{
+        font-size: 0.8em;
+    }
+}

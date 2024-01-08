@@ -1,0 +1,17 @@
+@font-face {
+    font-family: WorkSans;
+    src: url(./assets/fonts/static/WorkSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: WorkSansBold;
+    src: url(./assets/fonts/static/WorkSans-Bold.ttf);
+}
+@font-face {
+    font-family: WorkSansSemi;
+    src: url(./assets/fonts/static/WorkSans-SemiBold.ttf);
+}
+@font-face {
+    font-family: WorkSansItalic;
+    src: url(./assets/fonts/WorkSans-Italic-VariableFont_wght.ttf);
+}
